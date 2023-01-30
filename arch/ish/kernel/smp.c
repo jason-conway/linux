@@ -11,7 +11,7 @@
 #include "time_user.h"
 #include "threads_user.h"
 
-void __init smp_prepare_boot_cpu()
+void __init smp_prepare_boot_cpu(void)
 {
 }
 
@@ -91,7 +91,7 @@ static irqreturn_t ipi_irq(int irq, void *dev)
 	return IRQ_HANDLED;
 }
 
-void smp_send_stop()
+void smp_send_stop(void)
 {
 	printk("TODO: actually stop the threads\n");
 }
